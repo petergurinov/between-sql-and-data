@@ -1,0 +1,25 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:55969
+Node 1: 127.0.0.1:5432
+41
+...)....user.workshop.database.workshop..
+	9
+R........
+14
+p...workshop.
+	465
+R........S....in_hot_standby.off.S....integer_datetimes.on.S....TimeZone.UTC.S....IntervalStyle.postgres.S... search_path."$user", public.S....is_superuser.on.S....application_name..S...&default_transaction_read_only.off.S....scram_iterations.4096.S....DateStyle.ISO, MDY.S...#standard_conforming_strings.on.S...#session_authorization.workshop.S....client_encoding.UTF8.S...1server_version.18.6 (Debian 18.6-1.pgdg12+2).S....server_encoding.UTF8.K........{z..Z....I
+85
+P...O_pg3_0.SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at...S....
+	11
+1....Z....I
+43
+B....._pg3_0.........D....P.E.........S....
+	269
+2....T...S..conf................$..starts_at..........Z........speaker...................D...'......SmartData.......::...........D...'......SmartData.........}..........D...'......SmartData.......e*...........D...'......SmartData......."............C...SELECT 4.Z....I
+5
+X....
+===================================================================

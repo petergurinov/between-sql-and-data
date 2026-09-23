@@ -1,0 +1,13 @@
+{
+  "case": "ch-http-arrow",
+  "same_run": true,
+  "started_at_ns": 1789358185612384000,
+  "finished_at_ns": 1789358185690917000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "898d64813141305ebcbf36c580b13ba33102d31b769ff59af8dce32f93b3c927",
+  "capture_started_at_ns": 1789358185014840000,
+  "capture_finished_at_ns": 1789358186071645000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "ec40844e64e0170d32940b42002aaf0f338e45ae856e46ede4aaf3f7abce17a3"
+}

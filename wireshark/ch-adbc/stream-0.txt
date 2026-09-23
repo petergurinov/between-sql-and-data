@@ -1,0 +1,40 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:56100
+Node 1: 127.0.0.1:18123
+444
+POST /?default_format=ArrowStream&compress=1&query_id=query_UucSV1pBWf9s8mqC&session_id=session_vVwxOfRloQZHzzSS&output_format_arrow_compression_method=none HTTP/1.1
+user-agent: clickhouse-ext-arrow/0.1.0 adbc_clickhouse/0.1.0 clickhouse-rs/0.15.1 (lv:rust/1.89.0; os:macos)
+x-clickhouse-user: workshop
+x-clickhouse-key: workshop
+content-length: 65
+host: 127.0.0.1:18123
+
+SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at
+	1261
+HTTP/1.1 200 OK
+X-ClickHouse-Summary: {"read_rows":"4","read_bytes":"116","written_rows":"0","written_bytes":"0","total_rows_to_read":"4","result_rows":"4","result_bytes":"1024","elapsed_ns":"1837208","memory_usage":"2189630"}
+Date: Mon, 14 Sep 2026 03:56:27 GMT
+Connection: Keep-Alive
+Content-Type: application/octet-stream
+Access-Control-Expose-Headers: X-ClickHouse-Query-Id,X-ClickHouse-Summary,X-ClickHouse-Server-Display-Name,X-ClickHouse-Format,X-ClickHouse-Timezone,X-ClickHouse-Exception-Code,X-ClickHouse-Exception-Tag
+X-ClickHouse-Server-Display-Name: e32daa6288e0
+Transfer-Encoding: chunked
+X-ClickHouse-Query-Id: query_UucSV1pBWf9s8mqC
+X-ClickHouse-Format: ArrowStream
+X-ClickHouse-Timezone: UTC
+Keep-Alive: timeout=30, max=9999
+X-ClickHouse-Exception-Tag: rhuepebikcilwglr
+
+1BF
+...rC...O.LC..f......P.................
+.........
+..............................8.............&...........speaker........<...... ....0..
+0.P.....0..tarts_atp......4...d..t.qUTC......1.....@....H.....@conf...... ...... ....3......@.!.....p.....Q
+..............L..................T.....$..A...@...............`..............................`.W........SmartData....<......u;........!.....ef@.... .#\.#..............c.h.`...n..f.cBR..................
+0
+
+
+===================================================================

@@ -1,0 +1,13 @@
+{
+  "case": "ch-http-native",
+  "same_run": true,
+  "started_at_ns": 1789358182185860000,
+  "finished_at_ns": 1789358182306681000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "21a00d0dcbda5a79de6492a4e4199e56b8f5636ce949ab10a9e729469f640d17",
+  "capture_started_at_ns": 1789358181588414000,
+  "capture_finished_at_ns": 1789358182680118000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "1eadba3d18396196814dd1655ba3f29d8e5c7510c9c37907f828cd42c526a70f"
+}

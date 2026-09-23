@@ -1,0 +1,13 @@
+{
+  "case": "ch-flight",
+  "same_run": true,
+  "started_at_ns": 1789358188986452000,
+  "finished_at_ns": 1789358189081256000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "6ad4bfe3778d7ee79d79130ddb737c4206a78f2f8abb03ae0f05e0c3bcce89b6",
+  "capture_started_at_ns": 1789358188371239000,
+  "capture_finished_at_ns": 1789358189467152000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "2d14f655bf24294299a144b67e4dbbe88e8105a71ebc3ab32df02b8cf9df358f"
+}

@@ -1,0 +1,13 @@
+{
+  "case": "ch-adbc",
+  "same_run": true,
+  "started_at_ns": 1789358187258478000,
+  "finished_at_ns": 1789358187372953000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "ee6e30afd08a000e7c56c18543629a2fdeacaef457fb435fc78c80040fb82a1e",
+  "capture_started_at_ns": 1789358186656360000,
+  "capture_finished_at_ns": 1789358187766950000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "9148ac0db926f440c4f4a3f72d46520948c8873cb388cb45aa9b11ff91482aa7"
+}

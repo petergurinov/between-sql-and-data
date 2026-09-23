@@ -1,0 +1,13 @@
+{
+  "case": "ch-native",
+  "same_run": true,
+  "started_at_ns": 1789358180076945000,
+  "finished_at_ns": 1789358180606539000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "895bb89ecec70fe7714c99703d6f4ef95c759efac890ae9fc39682b14c3249b3",
+  "validation_sha256": "7bc9a0ae6163b8c596ca9c06d738537f78e08d033d18efc032643d4094aecf5b",
+  "capture_started_at_ns": 1789358179467137000,
+  "capture_finished_at_ns": 1789358180993823000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "2947338e0568aacda62b1fa2f524b9249561616909d77f740afc0835db9a3b4c"
+}

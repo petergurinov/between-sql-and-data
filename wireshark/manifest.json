@@ -1,0 +1,179 @@
+[
+  {
+    "case": "pg-simple-text",
+    "status": "pass",
+    "error": null,
+    "packet_count": 26,
+    "pcap_bytes": 3660,
+    "sha256": "b12c935d1c50bb7195cebc809964ad4260b35d641f97a24392c560eb6825a45e",
+    "same_run": true,
+    "client_output_sha256": "e62772f467965f0b2495dbae6640d9e5464fbc68cca2968a89f451b823354244",
+    "validation_sha256": "dfb4162b1a9d97ddea4066074f48e3a921182e1b427a6b3504d76a9a9f1febab",
+    "decode_as": [
+      "-d",
+      "tcp.port==5432,pgsql"
+    ]
+  },
+  {
+    "case": "pg-extended-binary",
+    "status": "pass",
+    "error": null,
+    "packet_count": 26,
+    "pcap_bytes": 3672,
+    "sha256": "238442a18c92da00a2b8cfce695a1bc75d575bcb1be75806fc2e6bf636d8c882",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "3050ec90e73f53c5c9e5b91ffc305322338258859452910da308ba777b00c5eb",
+    "decode_as": [
+      "-d",
+      "tcp.port==5432,pgsql"
+    ]
+  },
+  {
+    "case": "pg-copy-binary",
+    "status": "pass",
+    "error": null,
+    "packet_count": 22,
+    "pcap_bytes": 3232,
+    "sha256": "5cdd515b13ce87548d52961498840919d67adb5ae37ec7e62b35731f28a36270",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "71ed50cda109061a4c086b6f46b3369319b1db139dcd6abb6248d92589a9d7e9",
+    "decode_as": [
+      "-d",
+      "tcp.port==5432,pgsql"
+    ]
+  },
+  {
+    "case": "pg-adbc",
+    "status": "pass",
+    "error": null,
+    "packet_count": 122,
+    "pcap_bytes": 250124,
+    "sha256": "9a74a0a5bfffe7e65d123e82b59ba3b367caf6357cdd29a2cfd546fbe4719128",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "ea5cb8ed17c8c1d3b72ef886b6f07b9ce18fb6f5183934bc46bdbfce27c632a5",
+    "decode_as": [
+      "-d",
+      "tcp.port==5432,pgsql"
+    ]
+  },
+  {
+    "case": "pg-flight",
+    "status": "pass",
+    "error": null,
+    "packet_count": 40,
+    "pcap_bytes": 6776,
+    "sha256": "503ba6a2a3da165bdab2c80d132488945dc7e7c781fd44c0962151fa3159c10f",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "b090bce9b9fc1db620ce1d2f14860b4ab359f0da5b9d1a2b245e23c5a125992c",
+    "decode_as": [
+      "-d",
+      "tcp.port==15436,http2"
+    ]
+  },
+  {
+    "case": "ch-native",
+    "status": "pass",
+    "error": null,
+    "packet_count": 30,
+    "pcap_bytes": 5888,
+    "sha256": "2947338e0568aacda62b1fa2f524b9249561616909d77f740afc0835db9a3b4c",
+    "same_run": true,
+    "client_output_sha256": "895bb89ecec70fe7714c99703d6f4ef95c759efac890ae9fc39682b14c3249b3",
+    "validation_sha256": "7bc9a0ae6163b8c596ca9c06d738537f78e08d033d18efc032643d4094aecf5b",
+    "decode_as": []
+  },
+  {
+    "case": "ch-http-native",
+    "status": "pass",
+    "error": null,
+    "packet_count": 50,
+    "pcap_bytes": 76576,
+    "sha256": "1eadba3d18396196814dd1655ba3f29d8e5c7510c9c37907f828cd42c526a70f",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "21a00d0dcbda5a79de6492a4e4199e56b8f5636ce949ab10a9e729469f640d17",
+    "decode_as": [
+      "-d",
+      "tcp.port==18123,http"
+    ]
+  },
+  {
+    "case": "ch-http-rowbinary",
+    "status": "pass",
+    "error": null,
+    "packet_count": 16,
+    "pcap_bytes": 3068,
+    "sha256": "b608c602be53a45765e580af25ce88da8c4509a295e7f7253509296cdd357621",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "11e772273389d0a80b71af06f2263c7b9f762b2fa45ddb28378cfa24f5c462f2",
+    "decode_as": [
+      "-d",
+      "tcp.port==18123,http"
+    ]
+  },
+  {
+    "case": "ch-http-arrow",
+    "status": "pass",
+    "error": null,
+    "packet_count": 18,
+    "pcap_bytes": 3836,
+    "sha256": "ec40844e64e0170d32940b42002aaf0f338e45ae856e46ede4aaf3f7abce17a3",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "898d64813141305ebcbf36c580b13ba33102d31b769ff59af8dce32f93b3c927",
+    "decode_as": [
+      "-d",
+      "tcp.port==18123,http"
+    ]
+  },
+  {
+    "case": "ch-adbc",
+    "status": "pass",
+    "error": null,
+    "packet_count": 12,
+    "pcap_bytes": 3184,
+    "sha256": "9148ac0db926f440c4f4a3f72d46520948c8873cb388cb45aa9b11ff91482aa7",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "ee6e30afd08a000e7c56c18543629a2fdeacaef457fb435fc78c80040fb82a1e",
+    "decode_as": [
+      "-d",
+      "tcp.port==18123,http"
+    ]
+  },
+  {
+    "case": "ch-flight",
+    "status": "pass",
+    "error": null,
+    "packet_count": 34,
+    "pcap_bytes": 5820,
+    "sha256": "2d14f655bf24294299a144b67e4dbbe88e8105a71ebc3ab32df02b8cf9df358f",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "6ad4bfe3778d7ee79d79130ddb737c4206a78f2f8abb03ae0f05e0c3bcce89b6",
+    "decode_as": [
+      "-d",
+      "tcp.port==19090,http2"
+    ]
+  },
+  {
+    "case": "ch-mysql",
+    "status": "pass",
+    "error": null,
+    "packet_count": 26,
+    "pcap_bytes": 3312,
+    "sha256": "f2ac2ca03ad72e9bba2acbcb4bd85b2ee1229d3bda01bcee15939ba8ec6e1397",
+    "same_run": true,
+    "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+    "validation_sha256": "110c4c9ad113167fb2cd267c4732a5c3b70eab17aff9ff0af923ff1af2ba7650",
+    "decode_as": [
+      "-d",
+      "tcp.port==9004,mysql"
+    ]
+  }
+]

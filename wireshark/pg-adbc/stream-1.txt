@@ -1,0 +1,36 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 1
+Node 0: 127.0.0.1:55991
+Node 1: 127.0.0.1:5432
+41
+...)....user.workshop.database.workshop..
+	9
+R........
+14
+p...workshop.
+	465
+R........S....in_hot_standby.off.S....integer_datetimes.on.S....TimeZone.UTC.S....IntervalStyle.postgres.S... search_path."$user", public.S....is_superuser.on.S....application_name..S...&default_transaction_read_only.off.S....scram_iterations.4096.S....DateStyle.ISO, MDY.S...#standard_conforming_strings.on.S...#session_authorization.workshop.S....client_encoding.UTF8.S...1server_version.18.6 (Debian 18.6-1.pgdg12+2).S....server_encoding.UTF8.K.........~..Z....I
+23
+Q....BEGIN TRANSACTION.
+	17
+C...
+BEGIN.Z....T
+79
+P...I.SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at...S....
+	11
+1....Z....T
+12
+D....S.S....
+	97
+t......T...S..conf................$..starts_at..........Z........speaker...................Z....T
+144
+P...j.COPY (SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at) TO STDOUT (FORMAT binary)...B..............D....P.E.........S....
+	238
+1....2....n....H............d...:PGCOPY
+.
+...............SmartData.......::...........d...'......SmartData.........}..........d...'......SmartData.......e*...........d...'......SmartData......."............d......c....C....COPY 4.Z....T
+5
+X....
+===================================================================

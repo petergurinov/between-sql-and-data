@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "passed": 3,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "output_hashes",
+      "passed": true,
+      "count": 9
+    },
+    {
+      "name": "row_keys_and_grain",
+      "passed": true,
+      "rows": 5498,
+      "cells": 912
+    },
+    {
+      "name": "xlsx_values",
+      "passed": true,
+      "values_checked": 709242
+    }
+  ],
+  "errors": [],
+  "xlsx_sha256": "254a4b3ae0c4ab94dbcaf898713c2773b45edc64213e17aceceac687e7b6b068"
+}

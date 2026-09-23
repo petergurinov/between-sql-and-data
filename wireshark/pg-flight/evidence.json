@@ -1,0 +1,13 @@
+{
+  "case": "pg-flight",
+  "same_run": true,
+  "started_at_ns": 1789358178379810000,
+  "finished_at_ns": 1789358178514837000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "b090bce9b9fc1db620ce1d2f14860b4ab359f0da5b9d1a2b245e23c5a125992c",
+  "capture_started_at_ns": 1789358177788283000,
+  "capture_finished_at_ns": 1789358178884999000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "503ba6a2a3da165bdab2c80d132488945dc7e7c781fd44c0962151fa3159c10f"
+}

@@ -1,0 +1,19 @@
+[pg]
+host = "pg.example.net"
+port = 5432
+user = "benchmark"
+database = "benchmark"
+password_env = "BENCH_PG_PASSWORD"
+sslmode = "disable"
+flight_port = 15432
+
+[ch]
+host = "ch.example.net"
+http_port = 8123
+tcp_port = 9000
+user = "benchmark"
+database = "benchmark"
+password_env = "BENCH_CH_PASSWORD"
+secure = false
+flight_port = 9090
+adbc_driver_path = ""

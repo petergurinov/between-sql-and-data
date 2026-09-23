@@ -1,0 +1,13 @@
+{
+  "case": "ch-mysql",
+  "same_run": true,
+  "started_at_ns": 1789358190669763000,
+  "finished_at_ns": 1789358190733509000,
+  "client_output": "client-output.txt",
+  "client_output_sha256": "10c405f29e94885dff6cd72ebabb13fbd4a098851a92473a307d06b609df39d6",
+  "validation_sha256": "110c4c9ad113167fb2cd267c4732a5c3b70eab17aff9ff0af923ff1af2ba7650",
+  "capture_started_at_ns": 1789358190072837000,
+  "capture_finished_at_ns": 1789358191150054000,
+  "pcap": "capture.pcapng",
+  "pcap_sha256": "f2ac2ca03ad72e9bba2acbcb4bd85b2ee1229d3bda01bcee15939ba8ec6e1397"
+}

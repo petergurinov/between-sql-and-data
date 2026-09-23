@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+config/benchmark.toml
+artifacts/
+data/cache/
+data/generated/
+~$*.xlsx
+
+.DS_Store
+*.egg-info/

@@ -1,0 +1,34 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:56036
+Node 1: 127.0.0.1:19000
+43
+..ClickHouse client.......workshop.workshop
+	70
+.
+ClickHouse.......UTC.e32daa6288e0.
+notchunked
+notchunked.d.WuoO+{...
+24
+.
+notchunked
+notchunked.
+1
+.
+	1
+.
+165
+......0.0.0.0:0..........root.c55d620b2cfd.ClickHouse client........................ASELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at...............
+	74
+...............conf.String..starts_at.DateTime64(6, 'UTC')..speaker.Int32.
+	172
+...............conf.String..SmartData.SmartData.SmartData.SmartData.starts_at.DateTime64(6, 'UTC')....u;........!.....ef@.... .#\...speaker.Int32...........................
+	11
+..t........
+	2248
+.............%.host_name.String..e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.e32daa6288e0.current_time.DateTime.dp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.jdp.j.thread_id.UInt64..........................................................................................................................................................................................................................................................................................................type#Enum8('increment' = 1, 'gauge' = 2).......................................name.String..Query.SelectQuery.InitialQuery.InitialSelectQuery.QueriesWithSubqueries.SelectQueriesWithSubqueries.NetworkSendElapsedMicroseconds.NetworkSendBytes.GlobalThreadPoolJobs.QueryPlanOptimizeMicroseconds.QueryParseMicroseconds.QueryAnalysisMicroseconds.QueryPlanBuildMicroseconds.QueryPipelineBuildMicroseconds.SelectedRowsSelectedBytes.ContextLock.RWLockAcquiredReadLocks.RealTimeMicroseconds.UserTimeMicroseconds.SystemTimeMicroseconds.OSCPUVirtualTimeMicroseconds.OSReadChars.OSWriteChars.MemoryAllocatedWithoutCheck MemoryAllocatedWithoutCheckBytes.LogTrace.LogDebug.LoggerElapsedNanoseconds.InterfaceNativeSendBytes.ConcurrencyControlSlotsGranted+ConcurrencyControlSlotsAcquiredNonCompeting AsyncLoggingFileLogTotalMessages AsyncLoggingTextLogTotalMessages.MemoryTrackerUsage.MemoryTrackerPeakUsage.TemporaryDataOnDiskUsage.value.Int64.........................................................................R.......N...............T.......4...............t...............................y.......{.......................................x.......................^u..............................................P...............................................
+	1
+.
+===================================================================

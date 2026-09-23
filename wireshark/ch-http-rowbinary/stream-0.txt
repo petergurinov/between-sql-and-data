@@ -1,0 +1,42 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:56080
+Node 1: 127.0.0.1:18123
+240
+POST /?enable_http_compression=0 HTTP/1.1
+Host: 127.0.0.1:18123
+User-Agent: python-requests/2.34.2
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 82
+Authorization: Basic d29ya3Nob3A6d29ya3Nob3A=
+
+
+82
+SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at FORMAT RowBinary
+	905
+HTTP/1.1 200 OK
+X-ClickHouse-Summary: {"read_rows":"4","read_bytes":"116","written_rows":"0","written_bytes":"0","total_rows_to_read":"4","result_rows":"0","result_bytes":"0","elapsed_ns":"2718000","memory_usage":"1142015"}
+Date: Mon, 14 Sep 2026 03:56:24 GMT
+Connection: Keep-Alive
+Content-Type: application/octet-stream
+Access-Control-Expose-Headers: X-ClickHouse-Query-Id,X-ClickHouse-Summary,X-ClickHouse-Server-Display-Name,X-ClickHouse-Format,X-ClickHouse-Timezone,X-ClickHouse-Exception-Code,X-ClickHouse-Exception-Tag
+X-ClickHouse-Server-Display-Name: e32daa6288e0
+Transfer-Encoding: chunked
+X-ClickHouse-Query-Id: 796a3b80-8e7a-4ad3-b090-55035bd638b6
+X-ClickHouse-Format: RowBinary
+X-ClickHouse-Timezone: UTC
+Keep-Alive: timeout=30, max=9999
+X-ClickHouse-Exception-Tag: nhhwgzzbfocytqqn
+
+58
+.SmartData...u;........SmartData.....!.......SmartData...ef@.......SmartData.. .#\......
+
+	5
+0
+
+
+===================================================================

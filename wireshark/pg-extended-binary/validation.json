@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "rows": [
+    {
+      "conf": "SmartData",
+      "starts_at": "2023-09-13 11:00:00",
+      "speaker": 0
+    },
+    {
+      "conf": "SmartData",
+      "starts_at": "2024-09-08 10:15:00",
+      "speaker": 1
+    },
+    {
+      "conf": "SmartData",
+      "starts_at": "2025-10-05 10:00:00",
+      "speaker": 0
+    },
+    {
+      "conf": "SmartData",
+      "starts_at": "2026-09-23 10:30:00",
+      "speaker": 1
+    }
+  ],
+  "row_count": 4,
+  "schema": "[{'name': 'conf', 'oid': 1043}, {'name': 'starts_at', 'oid': 1114}, {'name': 'speaker', 'oid': 23}]",
+  "sql": "SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at",
+  "columns": [
+    "conf",
+    "starts_at",
+    "speaker"
+  ],
+  "raw_kind": "datetime-naive",
+  "result_formats": [
+    1,
+    1,
+    1
+  ]
+}

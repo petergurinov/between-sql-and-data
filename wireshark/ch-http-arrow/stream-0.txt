@@ -1,0 +1,49 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: 127.0.0.1:56088
+Node 1: 127.0.0.1:18123
+240
+POST /?enable_http_compression=0 HTTP/1.1
+Host: 127.0.0.1:18123
+User-Agent: python-requests/2.34.2
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 84
+Authorization: Basic d29ya3Nob3A6d29ya3Nob3A=
+
+
+84
+SELECT conf, starts_at, speaker FROM smartdata ORDER BY starts_at FORMAT ArrowStream
+	1484
+HTTP/1.1 200 OK
+X-ClickHouse-Summary: {"read_rows":"4","read_bytes":"116","written_rows":"0","written_bytes":"0","total_rows_to_read":"4","result_rows":"0","result_bytes":"0","elapsed_ns":"3499208","memory_usage":"1142015"}
+Date: Mon, 14 Sep 2026 03:56:25 GMT
+Connection: Keep-Alive
+Content-Type: application/octet-stream
+Access-Control-Expose-Headers: X-ClickHouse-Query-Id,X-ClickHouse-Summary,X-ClickHouse-Server-Display-Name,X-ClickHouse-Format,X-ClickHouse-Timezone,X-ClickHouse-Exception-Code,X-ClickHouse-Exception-Tag
+X-ClickHouse-Server-Display-Name: e32daa6288e0
+Transfer-Encoding: chunked
+X-ClickHouse-Query-Id: 9c1b3765-a093-4380-81be-0ce84f0867fd
+X-ClickHouse-Format: ArrowStream
+X-ClickHouse-Timezone: UTC
+Keep-Alive: timeout=30, max=9999
+X-ClickHouse-Exception-Tag: zxztzppsekgoujpx
+
+298
+..............
+.........
+...........................................................8...........................speaker................. ..........
+............starts_at...........................UTC.................................conf............................................................................................................................................ .......,.......P...............P.......(.......x...............x.......................................................................................................$...............SmartDataSmartDataSmartDataSmartData...............u;........!.....ef@.... .#\..........................
+
+	13
+8
+........
+
+	5
+0
+
+
+===================================================================

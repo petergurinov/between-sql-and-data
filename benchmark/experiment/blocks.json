@@ -1,0 +1,3157 @@
+[
+  {
+    "block_id": "core-q1-pg",
+    "lane": "pg",
+    "question_ids": [
+      "Q1"
+    ],
+    "cell_ids": [
+      "focus-q1-pg-pg_psycopg_simple-1m",
+      "focus-q1-pg-pg_psycopg_binary-1m",
+      "focus-q1-pg-pg_psycopg_simple-10m",
+      "focus-q1-pg-pg_psycopg_binary-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "core-q2-pg",
+    "lane": "pg",
+    "question_ids": [
+      "Q2"
+    ],
+    "cell_ids": [
+      "focus-q2-pg-pg_psycopg_simple-1m",
+      "focus-q2-pg-pg_adbc_copy-1m",
+      "focus-q2-pg-pg_psycopg_simple-10m",
+      "focus-q2-pg-pg_adbc_copy-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "core-q3-ch",
+    "lane": "ch",
+    "question_ids": [
+      "Q3"
+    ],
+    "cell_ids": [
+      "focus-q3-ch-ch_native-1m",
+      "focus-q3-ch-ch_http_native-1m",
+      "focus-q3-ch-ch_native-10m",
+      "focus-q3-ch-ch_http_native-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "core-q4-ch",
+    "lane": "ch",
+    "question_ids": [
+      "Q4"
+    ],
+    "cell_ids": [
+      "focus-q4-ch-ch_native_df-1m",
+      "focus-q4-ch-ch_http_arrowstream-1m",
+      "focus-q4-ch-ch_native_df-10m",
+      "focus-q4-ch-ch_http_arrowstream-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "core-scale-width-pg",
+    "lane": "pg",
+    "question_ids": [
+      "Q7",
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q7-pg-pg_psycopg_simple-w10-1",
+      "focus-q7-pg-pg_adbc_copy-w10-1",
+      "focus-q7-pg-pg_psycopg_simple-w10-10k",
+      "focus-q7-pg-pg_adbc_copy-w10-10k",
+      "focus-q7-pg-pg_psycopg_simple-w10-100k",
+      "focus-q7-pg-pg_adbc_copy-w10-100k",
+      "focus-q7-pg-pg_psycopg_simple-w10-1m",
+      "focus-q7-pg-pg_adbc_copy-w10-1m",
+      "focus-q7-pg-pg_psycopg_simple-w10-10m",
+      "focus-q7-pg-pg_adbc_copy-w10-10m",
+      "focus-q14-pg-pg_psycopg_simple-w50-10m",
+      "focus-q14-pg-pg_adbc_copy-w50-10m",
+      "focus-q14-pg-pg_psycopg_simple-w105-10m",
+      "focus-q14-pg-pg_adbc_copy-w105-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "core-scale-width-ch",
+    "lane": "ch",
+    "question_ids": [
+      "Q7",
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q7-ch-ch_native-w10-1",
+      "focus-q7-ch-ch_http_arrowstream-w10-1",
+      "focus-q7-ch-ch_native-w10-10k",
+      "focus-q7-ch-ch_http_arrowstream-w10-10k",
+      "focus-q7-ch-ch_native-w10-100k",
+      "focus-q7-ch-ch_http_arrowstream-w10-100k",
+      "focus-q7-ch-ch_native-w10-1m",
+      "focus-q7-ch-ch_http_arrowstream-w10-1m",
+      "focus-q7-ch-ch_native-w10-10m",
+      "focus-q7-ch-ch_http_arrowstream-w10-10m",
+      "focus-q14-ch-ch_native-w50-10m",
+      "focus-q14-ch-ch_http_arrowstream-w50-10m",
+      "focus-q14-ch-ch_native-w105-10m",
+      "focus-q14-ch-ch_http_arrowstream-w105-10m"
+    ],
+    "execution_condition": "core",
+    "pre_post": "full pass per cell before/after complete block attempt",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells",
+    "seal_requires": "post-validation and final applicable redo done; writers closed; immutable artifact checksum",
+    "same_host_exclusion": true,
+    "reuse_core_baseline": "only explicit Q7/Q14 references in the same scale-width block",
+    "stage": "c1"
+  },
+  {
+    "block_id": "chadbc-ch-w10-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-arrow-1",
+      "focus-q32-ch-ch_adbc_http-arrow-10k",
+      "focus-q32-ch-ch_adbc_http-arrow-100k",
+      "focus-q32-ch-ch_adbc_http-arrow-1m",
+      "focus-q32-ch-ch_adbc_http-arrow-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w10-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-df-1",
+      "focus-q32-ch-ch_adbc_http-df-10k",
+      "focus-q32-ch-ch_adbc_http-df-100k",
+      "focus-q32-ch-ch_adbc_http-df-1m",
+      "focus-q32-ch-ch_adbc_http-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w10-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_adbc_http-polars-1",
+      "focus-q30-ch-ch_adbc_http-polars-10k",
+      "focus-q30-ch-ch_adbc_http-polars-100k",
+      "focus-q30-ch-ch_adbc_http-polars-1m",
+      "focus-q30-ch-ch_adbc_http-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w105-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-arrow-w105-1",
+      "focus-q32-ch-ch_adbc_http-arrow-w105-10k",
+      "focus-q32-ch-ch_adbc_http-arrow-w105-100k",
+      "focus-q32-ch-ch_adbc_http-arrow-w105-1m",
+      "focus-q32-ch-ch_adbc_http-arrow-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w105-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-df-w105-1",
+      "focus-q32-ch-ch_adbc_http-df-w105-10k",
+      "focus-q32-ch-ch_adbc_http-df-w105-100k",
+      "focus-q32-ch-ch_adbc_http-df-w105-1m",
+      "focus-q32-ch-ch_adbc_http-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w105-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_adbc_http-polars-w105-1",
+      "focus-q30-ch-ch_adbc_http-polars-w105-10k",
+      "focus-q30-ch-ch_adbc_http-polars-w105-100k",
+      "focus-q30-ch-ch_adbc_http-polars-w105-1m",
+      "focus-q30-ch-ch_adbc_http-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w50-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-arrow-w50-1",
+      "focus-q32-ch-ch_adbc_http-arrow-w50-10k",
+      "focus-q32-ch-ch_adbc_http-arrow-w50-100k",
+      "focus-q32-ch-ch_adbc_http-arrow-w50-1m",
+      "focus-q32-ch-ch_adbc_http-arrow-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w50-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q32"
+    ],
+    "cell_ids": [
+      "focus-q32-ch-ch_adbc_http-df-w50-1",
+      "focus-q32-ch-ch_adbc_http-df-w50-10k",
+      "focus-q32-ch-ch_adbc_http-df-w50-100k",
+      "focus-q32-ch-ch_adbc_http-df-w50-1m",
+      "focus-q32-ch-ch_adbc_http-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chadbc-ch-w50-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_adbc_http-polars-w50-1",
+      "focus-q30-ch-ch_adbc_http-polars-w50-10k",
+      "focus-q30-ch-ch_adbc_http-polars-w50-100k",
+      "focus-q30-ch-ch_adbc_http-polars-w50-1m",
+      "focus-q30-ch-ch_adbc_http-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-csv-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv_df-csv-df-1",
+      "focus-q31-ch-ch_http_csv_df-csv-df-10k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-100k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-1m",
+      "focus-q31-ch-ch_http_csv_df-csv-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-csv-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_csv_df-polars-1",
+      "focus-q30-ch-ch_http_csv_df-polars-10k",
+      "focus-q30-ch-ch_http_csv_df-polars-100k",
+      "focus-q30-ch-ch_http_csv_df-polars-1m",
+      "focus-q30-ch-ch_http_csv_df-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-csv-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv-csv-raw-1",
+      "focus-q31-ch-ch_http_csv-csv-raw-10k",
+      "focus-q31-ch-ch_http_csv-csv-raw-100k",
+      "focus-q31-ch-ch_http_csv-csv-raw-1m",
+      "focus-q31-ch-ch_http_csv-csv-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-json-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-arrow-1",
+      "focus-q31-ch-ch_http_json-json-arrow-10k",
+      "focus-q31-ch-ch_http_json-json-arrow-100k",
+      "focus-q31-ch-ch_http_json-json-arrow-1m",
+      "focus-q31-ch-ch_http_json-json-arrow-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-json-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-df-1",
+      "focus-q31-ch-ch_http_json-json-df-10k",
+      "focus-q31-ch-ch_http_json-json-df-100k",
+      "focus-q31-ch-ch_http_json-json-df-1m",
+      "focus-q31-ch-ch_http_json-json-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-json-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_json-polars-1",
+      "focus-q30-ch-ch_http_json-polars-10k",
+      "focus-q30-ch-ch_http_json-polars-100k",
+      "focus-q30-ch-ch_http_json-polars-1m",
+      "focus-q30-ch-ch_http_json-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-json-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-raw-1",
+      "focus-q31-ch-ch_http_json-json-raw-10k",
+      "focus-q31-ch-ch_http_json-json-raw-100k",
+      "focus-q31-ch-ch_http_json-json-raw-1m",
+      "focus-q31-ch-ch_http_json-json-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-json-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-tuples-1",
+      "focus-q31-ch-ch_http_json-json-tuples-10k",
+      "focus-q31-ch-ch_http_json-json-tuples-100k",
+      "focus-q31-ch-ch_http_json-json-tuples-1m",
+      "focus-q31-ch-ch_http_json-json-tuples-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-parquet-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-1",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-parquet-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-1",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-10k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-100k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-1m",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-parquet-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_parquet_df-polars-1",
+      "focus-q30-ch-ch_http_parquet_df-polars-10k",
+      "focus-q30-ch-ch_http_parquet_df-polars-100k",
+      "focus-q30-ch-ch_http_parquet_df-polars-1m",
+      "focus-q30-ch-ch_http_parquet_df-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-parquet-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-raw-1",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w10-rowbinary-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-1",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-10k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-100k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-1m",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-csv-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv_df-csv-df-w105-1",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w105-10k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w105-100k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w105-1m",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-csv-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_csv_df-polars-w105-1",
+      "focus-q30-ch-ch_http_csv_df-polars-w105-10k",
+      "focus-q30-ch-ch_http_csv_df-polars-w105-100k",
+      "focus-q30-ch-ch_http_csv_df-polars-w105-1m",
+      "focus-q30-ch-ch_http_csv_df-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-csv-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv-csv-raw-w105-1",
+      "focus-q31-ch-ch_http_csv-csv-raw-w105-10k",
+      "focus-q31-ch-ch_http_csv-csv-raw-w105-100k",
+      "focus-q31-ch-ch_http_csv-csv-raw-w105-1m",
+      "focus-q31-ch-ch_http_csv-csv-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-json-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-arrow-w105-1",
+      "focus-q31-ch-ch_http_json-json-arrow-w105-10k",
+      "focus-q31-ch-ch_http_json-json-arrow-w105-100k",
+      "focus-q31-ch-ch_http_json-json-arrow-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-json-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-df-w105-1",
+      "focus-q31-ch-ch_http_json-json-df-w105-10k",
+      "focus-q31-ch-ch_http_json-json-df-w105-100k",
+      "focus-q31-ch-ch_http_json-json-df-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-json-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_json-polars-w105-1",
+      "focus-q30-ch-ch_http_json-polars-w105-10k",
+      "focus-q30-ch-ch_http_json-polars-w105-100k",
+      "focus-q30-ch-ch_http_json-polars-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-json-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-raw-w105-1",
+      "focus-q31-ch-ch_http_json-json-raw-w105-10k",
+      "focus-q31-ch-ch_http_json-json-raw-w105-100k",
+      "focus-q31-ch-ch_http_json-json-raw-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-json-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-tuples-w105-1",
+      "focus-q31-ch-ch_http_json-json-tuples-w105-10k",
+      "focus-q31-ch-ch_http_json-json-tuples-w105-100k",
+      "focus-q31-ch-ch_http_json-json-tuples-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-parquet-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w105-1",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w105-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w105-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w105-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-parquet-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w105-1",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w105-10k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w105-100k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w105-1m",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-parquet-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_parquet_df-polars-w105-1",
+      "focus-q30-ch-ch_http_parquet_df-polars-w105-10k",
+      "focus-q30-ch-ch_http_parquet_df-polars-w105-100k",
+      "focus-q30-ch-ch_http_parquet_df-polars-w105-1m",
+      "focus-q30-ch-ch_http_parquet_df-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-parquet-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w105-1",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w105-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w105-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w105-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w105-rowbinary-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w105-1",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w105-10k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w105-100k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w105-1m",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-csv-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv_df-csv-df-w50-1",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w50-10k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w50-100k",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w50-1m",
+      "focus-q31-ch-ch_http_csv_df-csv-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-csv-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_csv_df-polars-w50-1",
+      "focus-q30-ch-ch_http_csv_df-polars-w50-10k",
+      "focus-q30-ch-ch_http_csv_df-polars-w50-100k",
+      "focus-q30-ch-ch_http_csv_df-polars-w50-1m",
+      "focus-q30-ch-ch_http_csv_df-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-csv-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_csv-csv-raw-w50-1",
+      "focus-q31-ch-ch_http_csv-csv-raw-w50-10k",
+      "focus-q31-ch-ch_http_csv-csv-raw-w50-100k",
+      "focus-q31-ch-ch_http_csv-csv-raw-w50-1m",
+      "focus-q31-ch-ch_http_csv-csv-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-json-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-arrow-w50-1",
+      "focus-q31-ch-ch_http_json-json-arrow-w50-10k",
+      "focus-q31-ch-ch_http_json-json-arrow-w50-100k",
+      "focus-q31-ch-ch_http_json-json-arrow-w50-1m",
+      "focus-q31-ch-ch_http_json-json-arrow-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-json-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-df-w50-1",
+      "focus-q31-ch-ch_http_json-json-df-w50-10k",
+      "focus-q31-ch-ch_http_json-json-df-w50-100k",
+      "focus-q31-ch-ch_http_json-json-df-w50-1m",
+      "focus-q31-ch-ch_http_json-json-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-json-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_json-polars-w50-1",
+      "focus-q30-ch-ch_http_json-polars-w50-10k",
+      "focus-q30-ch-ch_http_json-polars-w50-100k",
+      "focus-q30-ch-ch_http_json-polars-w50-1m",
+      "focus-q30-ch-ch_http_json-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-json-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-raw-w50-1",
+      "focus-q31-ch-ch_http_json-json-raw-w50-10k",
+      "focus-q31-ch-ch_http_json-json-raw-w50-100k",
+      "focus-q31-ch-ch_http_json-json-raw-w50-1m",
+      "focus-q31-ch-ch_http_json-json-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-json-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-tuples-w50-1",
+      "focus-q31-ch-ch_http_json-json-tuples-w50-10k",
+      "focus-q31-ch-ch_http_json-json-tuples-w50-100k",
+      "focus-q31-ch-ch_http_json-json-tuples-w50-1m",
+      "focus-q31-ch-ch_http_json-json-tuples-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-parquet-arrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w50-1",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w50-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w50-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w50-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-arrow-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-parquet-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w50-1",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w50-10k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w50-100k",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w50-1m",
+      "focus-q31-ch-ch_http_parquet_df-parquet-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-parquet-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_parquet_df-polars-w50-1",
+      "focus-q30-ch-ch_http_parquet_df-polars-w50-10k",
+      "focus-q30-ch-ch_http_parquet_df-polars-w50-100k",
+      "focus-q30-ch-ch_http_parquet_df-polars-w50-1m",
+      "focus-q30-ch-ch_http_parquet_df-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-parquet-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w50-1",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w50-10k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w50-100k",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w50-1m",
+      "focus-q31-ch-ch_http_parquet-parquet-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "chfmt-ch-w50-rowbinary-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w50-1",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w50-10k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w50-100k",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w50-1m",
+      "focus-q31-ch-ch_http_rowbinary-rowbinary-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w10-binary-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_binary-binary-raw-1",
+      "focus-q26-pg-pg_copy_binary-binary-raw-10k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-100k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-1m",
+      "focus-q26-pg-pg_copy_binary-binary-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w10-csv-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q27"
+    ],
+    "cell_ids": [
+      "focus-q27-pg-pg_copy_csv-csv-df-1",
+      "focus-q27-pg-pg_copy_csv-csv-df-10k",
+      "focus-q27-pg-pg_copy_csv-csv-df-100k",
+      "focus-q27-pg-pg_copy_csv-csv-df-1m",
+      "focus-q27-pg-pg_copy_csv-csv-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w10-csv-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_copy_csv-polars-1",
+      "focus-q30-pg-pg_copy_csv-polars-10k",
+      "focus-q30-pg-pg_copy_csv-polars-100k",
+      "focus-q30-pg-pg_copy_csv-polars-1m",
+      "focus-q30-pg-pg_copy_csv-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w10-csv-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_csv-csv-raw-1",
+      "focus-q26-pg-pg_copy_csv-csv-raw-10k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-100k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-1m",
+      "focus-q26-pg-pg_copy_csv-csv-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w10-text-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_text-text-raw-1",
+      "focus-q26-pg-pg_copy_text-text-raw-10k",
+      "focus-q26-pg-pg_copy_text-text-raw-100k",
+      "focus-q26-pg-pg_copy_text-text-raw-1m",
+      "focus-q26-pg-pg_copy_text-text-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w105-binary-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_binary-binary-raw-w105-1",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w105-10k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w105-100k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w105-1m",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w105-csv-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q27"
+    ],
+    "cell_ids": [
+      "focus-q27-pg-pg_copy_csv-csv-df-w105-1",
+      "focus-q27-pg-pg_copy_csv-csv-df-w105-10k",
+      "focus-q27-pg-pg_copy_csv-csv-df-w105-100k",
+      "focus-q27-pg-pg_copy_csv-csv-df-w105-1m",
+      "focus-q27-pg-pg_copy_csv-csv-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w105-csv-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_copy_csv-polars-w105-1",
+      "focus-q30-pg-pg_copy_csv-polars-w105-10k",
+      "focus-q30-pg-pg_copy_csv-polars-w105-100k",
+      "focus-q30-pg-pg_copy_csv-polars-w105-1m",
+      "focus-q30-pg-pg_copy_csv-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w105-csv-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_csv-csv-raw-w105-1",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w105-10k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w105-100k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w105-1m",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w105-text-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_text-text-raw-w105-1",
+      "focus-q26-pg-pg_copy_text-text-raw-w105-10k",
+      "focus-q26-pg-pg_copy_text-text-raw-w105-100k",
+      "focus-q26-pg-pg_copy_text-text-raw-w105-1m",
+      "focus-q26-pg-pg_copy_text-text-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w50-binary-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_binary-binary-raw-w50-1",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w50-10k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w50-100k",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w50-1m",
+      "focus-q26-pg-pg_copy_binary-binary-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w50-csv-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q27"
+    ],
+    "cell_ids": [
+      "focus-q27-pg-pg_copy_csv-csv-df-w50-1",
+      "focus-q27-pg-pg_copy_csv-csv-df-w50-10k",
+      "focus-q27-pg-pg_copy_csv-csv-df-w50-100k",
+      "focus-q27-pg-pg_copy_csv-csv-df-w50-1m",
+      "focus-q27-pg-pg_copy_csv-csv-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w50-csv-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_copy_csv-polars-w50-1",
+      "focus-q30-pg-pg_copy_csv-polars-w50-10k",
+      "focus-q30-pg-pg_copy_csv-polars-w50-100k",
+      "focus-q30-pg-pg_copy_csv-polars-w50-1m",
+      "focus-q30-pg-pg_copy_csv-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w50-csv-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_csv-csv-raw-w50-1",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w50-10k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w50-100k",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w50-1m",
+      "focus-q26-pg-pg_copy_csv-csv-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "copy-pg-w50-text-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q26"
+    ],
+    "cell_ids": [
+      "focus-q26-pg-pg_copy_text-text-raw-w50-1",
+      "focus-q26-pg-pg_copy_text-text-raw-w50-10k",
+      "focus-q26-pg-pg_copy_text-text-raw-w50-100k",
+      "focus-q26-pg-pg_copy_text-text-raw-w50-1m",
+      "focus-q26-pg-pg_copy_text-text-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "core-q2-pg-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_simple-polars-1m",
+      "focus-q30-pg-pg_adbc_copy-polars-1m",
+      "focus-q30-pg-pg_psycopg_simple-polars-10m",
+      "focus-q30-pg-pg_adbc_copy-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "core-q4-ch-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_native_df-polars-1m",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-1m",
+      "focus-q30-ch-ch_native_df-polars-10m",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w105-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-ch-ch_http_arrowstream_df-df-w105-1",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w105-10k",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w105-100k",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w105-1m",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w105-10m",
+      "focus-q14-ch-ch_native_df-df-w105-1",
+      "focus-q14-ch-ch_native_df-df-w105-10k",
+      "focus-q14-ch-ch_native_df-df-w105-100k",
+      "focus-q14-ch-ch_native_df-df-w105-1m",
+      "focus-q14-ch-ch_native_df-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w105-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w105-1",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w105-10k",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w105-100k",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w105-10m",
+      "focus-q30-ch-ch_native_df-polars-w105-1",
+      "focus-q30-ch-ch_native_df-polars-w105-10k",
+      "focus-q30-ch-ch_native_df-polars-w105-100k",
+      "focus-q30-ch-ch_native_df-polars-w105-1m",
+      "focus-q30-ch-ch_native_df-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w105-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-ch-ch_http_arrowstream-w105-1",
+      "focus-q14-ch-ch_http_arrowstream-w105-10k",
+      "focus-q14-ch-ch_http_arrowstream-w105-100k",
+      "focus-q14-ch-ch_http_arrowstream-w105-1m",
+      "focus-q14-ch-ch_http_native-w105-1",
+      "focus-q14-ch-ch_http_native-w105-10k",
+      "focus-q14-ch-ch_http_native-w105-100k",
+      "focus-q14-ch-ch_http_native-w105-1m",
+      "focus-q14-ch-ch_http_native-w105-10m",
+      "focus-q14-ch-ch_native-w105-1",
+      "focus-q14-ch-ch_native-w105-10k",
+      "focus-q14-ch-ch_native-w105-100k",
+      "focus-q14-ch-ch_native-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w50-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-ch-ch_http_arrowstream_df-df-w50-1",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w50-10k",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w50-100k",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w50-1m",
+      "focus-q14-ch-ch_http_arrowstream_df-df-w50-10m",
+      "focus-q14-ch-ch_native_df-df-w50-1",
+      "focus-q14-ch-ch_native_df-df-w50-10k",
+      "focus-q14-ch-ch_native_df-df-w50-100k",
+      "focus-q14-ch-ch_native_df-df-w50-1m",
+      "focus-q14-ch-ch_native_df-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w50-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w50-1",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w50-10k",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w50-100k",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w50-1m",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-w50-10m",
+      "focus-q30-ch-ch_native_df-polars-w50-1",
+      "focus-q30-ch-ch_native_df-polars-w50-10k",
+      "focus-q30-ch-ch_native_df-polars-w50-100k",
+      "focus-q30-ch-ch_native_df-polars-w50-1m",
+      "focus-q30-ch-ch_native_df-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-ch-w50-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-ch-ch_http_arrowstream-w50-1",
+      "focus-q14-ch-ch_http_arrowstream-w50-10k",
+      "focus-q14-ch-ch_http_arrowstream-w50-100k",
+      "focus-q14-ch-ch_http_arrowstream-w50-1m",
+      "focus-q14-ch-ch_http_native-w50-1",
+      "focus-q14-ch-ch_http_native-w50-10k",
+      "focus-q14-ch-ch_http_native-w50-100k",
+      "focus-q14-ch-ch_http_native-w50-1m",
+      "focus-q14-ch-ch_http_native-w50-10m",
+      "focus-q14-ch-ch_native-w50-1",
+      "focus-q14-ch-ch_native-w50-10k",
+      "focus-q14-ch-ch_native-w50-100k",
+      "focus-q14-ch-ch_native-w50-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w105-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-pg-pg_adbc_copy-df-w105-1",
+      "focus-q14-pg-pg_adbc_copy-df-w105-10k",
+      "focus-q14-pg-pg_adbc_copy-df-w105-100k",
+      "focus-q14-pg-pg_adbc_copy-df-w105-1m",
+      "focus-q14-pg-pg_adbc_copy-df-w105-10m",
+      "focus-q14-pg-pg_psycopg_simple-df-w105-1",
+      "focus-q14-pg-pg_psycopg_simple-df-w105-10k",
+      "focus-q14-pg-pg_psycopg_simple-df-w105-100k",
+      "focus-q14-pg-pg_psycopg_simple-df-w105-1m",
+      "focus-q14-pg-pg_psycopg_simple-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w105-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_copy-polars-w105-1",
+      "focus-q30-pg-pg_adbc_copy-polars-w105-10k",
+      "focus-q30-pg-pg_adbc_copy-polars-w105-100k",
+      "focus-q30-pg-pg_adbc_copy-polars-w105-10m",
+      "focus-q30-pg-pg_psycopg_simple-polars-w105-1",
+      "focus-q30-pg-pg_psycopg_simple-polars-w105-10k",
+      "focus-q30-pg-pg_psycopg_simple-polars-w105-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w105-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-pg-pg_adbc_copy-w105-1",
+      "focus-q14-pg-pg_adbc_copy-w105-10k",
+      "focus-q14-pg-pg_adbc_copy-w105-100k",
+      "focus-q14-pg-pg_adbc_copy-w105-1m",
+      "focus-q14-pg-pg_psycopg_binary-w105-1",
+      "focus-q14-pg-pg_psycopg_binary-w105-10k",
+      "focus-q14-pg-pg_psycopg_binary-w105-100k",
+      "focus-q14-pg-pg_psycopg_binary-w105-1m",
+      "focus-q14-pg-pg_psycopg_binary-w105-10m",
+      "focus-q14-pg-pg_psycopg_simple-w105-1",
+      "focus-q14-pg-pg_psycopg_simple-w105-10k",
+      "focus-q14-pg-pg_psycopg_simple-w105-100k",
+      "focus-q14-pg-pg_psycopg_simple-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w50-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-pg-pg_adbc_copy-df-w50-1",
+      "focus-q14-pg-pg_adbc_copy-df-w50-10k",
+      "focus-q14-pg-pg_adbc_copy-df-w50-100k",
+      "focus-q14-pg-pg_adbc_copy-df-w50-1m",
+      "focus-q14-pg-pg_adbc_copy-df-w50-10m",
+      "focus-q14-pg-pg_psycopg_simple-df-w50-1",
+      "focus-q14-pg-pg_psycopg_simple-df-w50-10k",
+      "focus-q14-pg-pg_psycopg_simple-df-w50-100k",
+      "focus-q14-pg-pg_psycopg_simple-df-w50-1m",
+      "focus-q14-pg-pg_psycopg_simple-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w50-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_copy-polars-w50-1",
+      "focus-q30-pg-pg_adbc_copy-polars-w50-10k",
+      "focus-q30-pg-pg_adbc_copy-polars-w50-100k",
+      "focus-q30-pg-pg_adbc_copy-polars-w50-1m",
+      "focus-q30-pg-pg_adbc_copy-polars-w50-10m",
+      "focus-q30-pg-pg_psycopg_simple-polars-w50-1",
+      "focus-q30-pg-pg_psycopg_simple-polars-w50-10k",
+      "focus-q30-pg-pg_psycopg_simple-polars-w50-100k",
+      "focus-q30-pg-pg_psycopg_simple-polars-w50-1m",
+      "focus-q30-pg-pg_psycopg_simple-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q14-pg-w50-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q14"
+    ],
+    "cell_ids": [
+      "focus-q14-pg-pg_adbc_copy-w50-1",
+      "focus-q14-pg-pg_adbc_copy-w50-10k",
+      "focus-q14-pg-pg_adbc_copy-w50-100k",
+      "focus-q14-pg-pg_adbc_copy-w50-1m",
+      "focus-q14-pg-pg_psycopg_binary-w50-1",
+      "focus-q14-pg-pg_psycopg_binary-w50-10k",
+      "focus-q14-pg-pg_psycopg_binary-w50-100k",
+      "focus-q14-pg-pg_psycopg_binary-w50-1m",
+      "focus-q14-pg-pg_psycopg_binary-w50-10m",
+      "focus-q14-pg-pg_psycopg_simple-w50-1",
+      "focus-q14-pg-pg_psycopg_simple-w50-10k",
+      "focus-q14-pg-pg_psycopg_simple-w50-100k",
+      "focus-q14-pg-pg_psycopg_simple-w50-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-ch-w10-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q7"
+    ],
+    "cell_ids": [
+      "focus-q7-ch-ch_http_arrowstream_df-df-1",
+      "focus-q7-ch-ch_http_arrowstream_df-df-10k",
+      "focus-q7-ch-ch_http_arrowstream_df-df-100k",
+      "focus-q7-ch-ch_native_df-df-1",
+      "focus-q7-ch-ch_native_df-df-10k",
+      "focus-q7-ch-ch_native_df-df-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-ch-w10-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_arrowstream_df-polars-1",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-10k",
+      "focus-q30-ch-ch_http_arrowstream_df-polars-100k",
+      "focus-q30-ch-ch_native_df-polars-1",
+      "focus-q30-ch-ch_native_df-polars-10k",
+      "focus-q30-ch-ch_native_df-polars-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-ch-w10-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q7"
+    ],
+    "cell_ids": [
+      "focus-q7-ch-ch_http_native-1",
+      "focus-q7-ch-ch_http_native-10k",
+      "focus-q7-ch-ch_http_native-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-pg-w10-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q7"
+    ],
+    "cell_ids": [
+      "focus-q7-pg-pg_adbc_copy-df-1",
+      "focus-q7-pg-pg_adbc_copy-df-10k",
+      "focus-q7-pg-pg_adbc_copy-df-100k",
+      "focus-q7-pg-pg_psycopg_simple-df-1",
+      "focus-q7-pg-pg_psycopg_simple-df-10k",
+      "focus-q7-pg-pg_psycopg_simple-df-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-pg-w10-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_copy-polars-1",
+      "focus-q30-pg-pg_adbc_copy-polars-10k",
+      "focus-q30-pg-pg_adbc_copy-polars-100k",
+      "focus-q30-pg-pg_psycopg_simple-polars-1",
+      "focus-q30-pg-pg_psycopg_simple-polars-10k",
+      "focus-q30-pg-pg_psycopg_simple-polars-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cross-q7-pg-w10-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q7"
+    ],
+    "cell_ids": [
+      "focus-q7-pg-pg_psycopg_binary-1",
+      "focus-q7-pg-pg_psycopg_binary-10k",
+      "focus-q7-pg-pg_psycopg_binary-100k"
+    ],
+    "execution_condition": "core",
+    "stage": "c2",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w10-arrow",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-arrow-1",
+      "focus-q29-pg-cx_pg_binary-arrow-10k",
+      "focus-q29-pg-cx_pg_binary-arrow-100k",
+      "focus-q29-pg-cx_pg_binary-arrow-1m",
+      "focus-q29-pg-cx_pg_binary-arrow-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w10-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-df-1",
+      "focus-q29-pg-cx_pg_binary-df-10k",
+      "focus-q29-pg-cx_pg_binary-df-100k",
+      "focus-q29-pg-cx_pg_binary-df-1m",
+      "focus-q29-pg-cx_pg_binary-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w10-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-cx_pg_binary-polars-1",
+      "focus-q30-pg-cx_pg_binary-polars-10k",
+      "focus-q30-pg-cx_pg_binary-polars-100k",
+      "focus-q30-pg-cx_pg_binary-polars-1m",
+      "focus-q30-pg-cx_pg_binary-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w105-arrow",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-arrow-w105-1",
+      "focus-q29-pg-cx_pg_binary-arrow-w105-10k",
+      "focus-q29-pg-cx_pg_binary-arrow-w105-100k",
+      "focus-q29-pg-cx_pg_binary-arrow-w105-1m",
+      "focus-q29-pg-cx_pg_binary-arrow-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w105-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-df-w105-1",
+      "focus-q29-pg-cx_pg_binary-df-w105-10k",
+      "focus-q29-pg-cx_pg_binary-df-w105-100k",
+      "focus-q29-pg-cx_pg_binary-df-w105-1m",
+      "focus-q29-pg-cx_pg_binary-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w105-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-cx_pg_binary-polars-w105-1",
+      "focus-q30-pg-cx_pg_binary-polars-w105-10k",
+      "focus-q30-pg-cx_pg_binary-polars-w105-100k",
+      "focus-q30-pg-cx_pg_binary-polars-w105-1m",
+      "focus-q30-pg-cx_pg_binary-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w50-arrow",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-arrow-w50-1",
+      "focus-q29-pg-cx_pg_binary-arrow-w50-10k",
+      "focus-q29-pg-cx_pg_binary-arrow-w50-100k",
+      "focus-q29-pg-cx_pg_binary-arrow-w50-1m",
+      "focus-q29-pg-cx_pg_binary-arrow-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w50-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q29"
+    ],
+    "cell_ids": [
+      "focus-q29-pg-cx_pg_binary-df-w50-1",
+      "focus-q29-pg-cx_pg_binary-df-w50-10k",
+      "focus-q29-pg-cx_pg_binary-df-w50-100k",
+      "focus-q29-pg-cx_pg_binary-df-w50-1m",
+      "focus-q29-pg-cx_pg_binary-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "cx-pg-w50-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-cx_pg_binary-polars-w50-1",
+      "focus-q30-pg-cx_pg_binary-polars-w50-10k",
+      "focus-q30-pg-cx_pg_binary-polars-w50-100k",
+      "focus-q30-pg-cx_pg_binary-polars-w50-1m",
+      "focus-q30-pg-cx_pg_binary-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w10-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-df-1",
+      "focus-q33-ch-ch_pg_emu-df-10k",
+      "focus-q33-ch-ch_pg_emu-df-100k",
+      "focus-q33-ch-ch_pg_emu-df-1m",
+      "focus-q33-ch-ch_pg_emu-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w10-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_pg_emu-polars-1",
+      "focus-q30-ch-ch_pg_emu-polars-10k",
+      "focus-q30-ch-ch_pg_emu-polars-100k",
+      "focus-q30-ch-ch_pg_emu-polars-1m",
+      "focus-q30-ch-ch_pg_emu-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w10-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-raw-1",
+      "focus-q33-ch-ch_pg_emu-raw-10k",
+      "focus-q33-ch-ch_pg_emu-raw-100k",
+      "focus-q33-ch-ch_pg_emu-raw-1m",
+      "focus-q33-ch-ch_pg_emu-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w10-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-tuples-1",
+      "focus-q33-ch-ch_pg_emu-tuples-10k",
+      "focus-q33-ch-ch_pg_emu-tuples-100k",
+      "focus-q33-ch-ch_pg_emu-tuples-1m",
+      "focus-q33-ch-ch_pg_emu-tuples-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w105-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-df-w105-1",
+      "focus-q33-ch-ch_pg_emu-df-w105-10k",
+      "focus-q33-ch-ch_pg_emu-df-w105-100k",
+      "focus-q33-ch-ch_pg_emu-df-w105-1m",
+      "focus-q33-ch-ch_pg_emu-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w105-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_pg_emu-polars-w105-1",
+      "focus-q30-ch-ch_pg_emu-polars-w105-10k",
+      "focus-q30-ch-ch_pg_emu-polars-w105-100k",
+      "focus-q30-ch-ch_pg_emu-polars-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w105-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-raw-w105-1",
+      "focus-q33-ch-ch_pg_emu-raw-w105-10k",
+      "focus-q33-ch-ch_pg_emu-raw-w105-100k",
+      "focus-q33-ch-ch_pg_emu-raw-w105-1m",
+      "focus-q33-ch-ch_pg_emu-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w105-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-tuples-w105-1",
+      "focus-q33-ch-ch_pg_emu-tuples-w105-10k",
+      "focus-q33-ch-ch_pg_emu-tuples-w105-100k",
+      "focus-q33-ch-ch_pg_emu-tuples-w105-1m",
+      "focus-q33-ch-ch_pg_emu-tuples-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w50-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-df-w50-1",
+      "focus-q33-ch-ch_pg_emu-df-w50-10k",
+      "focus-q33-ch-ch_pg_emu-df-w50-100k",
+      "focus-q33-ch-ch_pg_emu-df-w50-1m",
+      "focus-q33-ch-ch_pg_emu-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w50-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_pg_emu-polars-w50-1",
+      "focus-q30-ch-ch_pg_emu-polars-w50-10k",
+      "focus-q30-ch-ch_pg_emu-polars-w50-100k",
+      "focus-q30-ch-ch_pg_emu-polars-w50-1m",
+      "focus-q30-ch-ch_pg_emu-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w50-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-raw-w50-1",
+      "focus-q33-ch-ch_pg_emu-raw-w50-10k",
+      "focus-q33-ch-ch_pg_emu-raw-w50-100k",
+      "focus-q33-ch-ch_pg_emu-raw-w50-1m",
+      "focus-q33-ch-ch_pg_emu-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "emu-ch-w50-tuples",
+    "lane": "ch",
+    "question_ids": [
+      "Q33"
+    ],
+    "cell_ids": [
+      "focus-q33-ch-ch_pg_emu-tuples-w50-1",
+      "focus-q33-ch-ch_pg_emu-tuples-w50-10k",
+      "focus-q33-ch-ch_pg_emu-tuples-w50-100k",
+      "focus-q33-ch-ch_pg_emu-tuples-w50-1m",
+      "focus-q33-ch-ch_pg_emu-tuples-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "file-read-ch-w10",
+    "lane": "ch",
+    "question_ids": [
+      "Q23"
+    ],
+    "cell_ids": [
+      "focus-q23-ch-duckdb_file-duckdf-1m",
+      "focus-q23-ch-duckdb_file-duckdf-10m",
+      "focus-q23-ch-duckdb_file-duckpl-1m",
+      "focus-q23-ch-duckdb_file-duckpl-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c6",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "file-read-ch-w105",
+    "lane": "ch",
+    "question_ids": [
+      "Q23"
+    ],
+    "cell_ids": [
+      "focus-q23-ch-duckdb_file-duckdf-w105-1m",
+      "focus-q23-ch-duckdb_file-duckdf-w105-10m",
+      "focus-q23-ch-duckdb_file-duckpl-w105-1m",
+      "focus-q23-ch-duckdb_file-duckpl-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c6",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "file-read-pg-w10",
+    "lane": "pg",
+    "question_ids": [
+      "Q23"
+    ],
+    "cell_ids": [
+      "focus-q23-pg-duckdb_file-duckdf-1m",
+      "focus-q23-pg-duckdb_file-duckdf-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c6",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "file-read-pg-w105",
+    "lane": "pg",
+    "question_ids": [
+      "Q23"
+    ],
+    "cell_ids": [
+      "focus-q23-pg-duckdb_file-duckdf-w105-1m",
+      "focus-q23-pg-duckdb_file-duckdf-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c6",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w10-bindf",
+    "lane": "pg",
+    "question_ids": [
+      "Q15"
+    ],
+    "cell_ids": [
+      "focus-q15-pg-pg_psycopg_binary-df-1",
+      "focus-q15-pg-pg_psycopg_binary-df-10k",
+      "focus-q15-pg-pg_psycopg_binary-df-100k",
+      "focus-q15-pg-pg_psycopg_binary-df-1m",
+      "focus-q15-pg-pg_psycopg_binary-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c3",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w10-bindf-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_binary-polars-1",
+      "focus-q30-pg-pg_psycopg_binary-polars-10k",
+      "focus-q30-pg-pg_psycopg_binary-polars-100k",
+      "focus-q30-pg-pg_psycopg_binary-polars-1m",
+      "focus-q30-pg-pg_psycopg_binary-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w105-bindf",
+    "lane": "pg",
+    "question_ids": [
+      "Q15"
+    ],
+    "cell_ids": [
+      "focus-q15-pg-pg_psycopg_binary-df-w105-1",
+      "focus-q15-pg-pg_psycopg_binary-df-w105-10k",
+      "focus-q15-pg-pg_psycopg_binary-df-w105-100k",
+      "focus-q15-pg-pg_psycopg_binary-df-w105-1m",
+      "focus-q15-pg-pg_psycopg_binary-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c3",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w105-bindf-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_binary-polars-w105-1",
+      "focus-q30-pg-pg_psycopg_binary-polars-w105-10k",
+      "focus-q30-pg-pg_psycopg_binary-polars-w105-100k",
+      "focus-q30-pg-pg_psycopg_binary-polars-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w50-bindf",
+    "lane": "pg",
+    "question_ids": [
+      "Q15"
+    ],
+    "cell_ids": [
+      "focus-q15-pg-pg_psycopg_binary-df-w50-1",
+      "focus-q15-pg-pg_psycopg_binary-df-w50-10k",
+      "focus-q15-pg-pg_psycopg_binary-df-w50-100k",
+      "focus-q15-pg-pg_psycopg_binary-df-w50-1m",
+      "focus-q15-pg-pg_psycopg_binary-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c3",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q15-pg-w50-bindf-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_binary-polars-w50-1",
+      "focus-q30-pg-pg_psycopg_binary-polars-w50-10k",
+      "focus-q30-pg-pg_psycopg_binary-polars-w50-100k",
+      "focus-q30-pg-pg_psycopg_binary-polars-w50-1m",
+      "focus-q30-pg-pg_psycopg_binary-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q16-ch-w105-dfarrow",
+    "lane": "ch",
+    "question_ids": [
+      "Q16"
+    ],
+    "cell_ids": [
+      "focus-q16-ch-ch_http_arrowstream_df-dfarrow-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c4",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q16-ch-w105-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q16"
+    ],
+    "cell_ids": [
+      "focus-q16-ch-ch_http_arrowstream_df-polars-w105-1m",
+      "focus-q16-ch-ch_http_arrowstream_df-dfnumpy-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c4",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q16-pg-w105-dfarrow",
+    "lane": "pg",
+    "question_ids": [
+      "Q16"
+    ],
+    "cell_ids": [
+      "focus-q16-pg-pg_adbc_copy-dfarrow-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c4",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q16-pg-w105-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q16"
+    ],
+    "cell_ids": [
+      "focus-q16-pg-pg_adbc_copy-polars-w105-1m",
+      "focus-q16-pg-pg_psycopg_simple-polars-w105-1m",
+      "focus-q16-pg-pg_adbc_copy-dfnumpy-w105-1m",
+      "focus-q16-pg-pg_psycopg_simple-dfnumpy-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c4",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q18-pg-w10-nocopy",
+    "lane": "pg",
+    "question_ids": [
+      "Q18"
+    ],
+    "cell_ids": [
+      "focus-q18-pg-pg_adbc_copy-nocopy-1",
+      "focus-q18-pg-pg_adbc_copy-nocopy-10k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-100k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-1m",
+      "focus-q18-pg-pg_adbc_copy-nocopy-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q18-pg-w105-nocopy",
+    "lane": "pg",
+    "question_ids": [
+      "Q18"
+    ],
+    "cell_ids": [
+      "focus-q18-pg-pg_adbc_copy-nocopy-w105-1",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w105-10k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w105-100k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w105-1m",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q18-pg-w50-nocopy",
+    "lane": "pg",
+    "question_ids": [
+      "Q18"
+    ],
+    "cell_ids": [
+      "focus-q18-pg-pg_adbc_copy-nocopy-w50-1",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w50-10k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w50-100k",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w50-1m",
+      "focus-q18-pg-pg_adbc_copy-nocopy-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-ch-w10-srvcost",
+    "lane": "ch",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-ch-ch_native-srvcost-1",
+      "focus-q19-ch-ch_native-srvcost-10k",
+      "focus-q19-ch-ch_native-srvcost-100k",
+      "focus-q19-ch-ch_native-srvcost-1m",
+      "focus-q19-ch-ch_native-srvcost-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-ch-w105-srvcost",
+    "lane": "ch",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-ch-ch_native-srvcost-w105-1",
+      "focus-q19-ch-ch_native-srvcost-w105-10k",
+      "focus-q19-ch-ch_native-srvcost-w105-100k",
+      "focus-q19-ch-ch_native-srvcost-w105-1m",
+      "focus-q19-ch-ch_native-srvcost-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-ch-w50-srvcost",
+    "lane": "ch",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-ch-ch_native-srvcost-w50-1",
+      "focus-q19-ch-ch_native-srvcost-w50-10k",
+      "focus-q19-ch-ch_native-srvcost-w50-100k",
+      "focus-q19-ch-ch_native-srvcost-w50-1m",
+      "focus-q19-ch-ch_native-srvcost-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-pg-w10-srvcost",
+    "lane": "pg",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-pg-pg_psycopg_simple-srvcost-1",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-10k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-100k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-1m",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-pg-w105-srvcost",
+    "lane": "pg",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w105-1",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w105-10k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w105-100k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w105-1m",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q19-pg-w50-srvcost",
+    "lane": "pg",
+    "question_ids": [
+      "Q19"
+    ],
+    "cell_ids": [
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w50-1",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w50-10k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w50-100k",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w50-1m",
+      "focus-q19-pg-pg_psycopg_simple-srvcost-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q20-ch-w105-retained",
+    "lane": "ch",
+    "question_ids": [
+      "Q20"
+    ],
+    "cell_ids": [
+      "focus-q20-ch-ch_native-retained-tuples-w105-1m",
+      "focus-q20-ch-ch_http_arrowstream-retained-arrow-w105-1m",
+      "focus-q20-ch-ch_http_arrowstream_df-retained-df-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q20-pg-w105-retained",
+    "lane": "pg",
+    "question_ids": [
+      "Q20"
+    ],
+    "cell_ids": [
+      "focus-q20-pg-pg_psycopg_simple-retained-tuples-w105-1m",
+      "focus-q20-pg-pg_adbc_copy-retained-arrow-w105-1m",
+      "focus-q20-pg-pg_adbc_copy-retained-df-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c5",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w10-exttext",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-1",
+      "focus-q24-pg-pg_psycopg_exttext-10k",
+      "focus-q24-pg-pg_psycopg_exttext-100k",
+      "focus-q24-pg-pg_psycopg_exttext-1m",
+      "focus-q24-pg-pg_psycopg_exttext-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w10-exttext-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-df-1",
+      "focus-q24-pg-pg_psycopg_exttext-df-10k",
+      "focus-q24-pg-pg_psycopg_exttext-df-100k",
+      "focus-q24-pg-pg_psycopg_exttext-df-1m",
+      "focus-q24-pg-pg_psycopg_exttext-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w10-exttext-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_exttext-polars-1",
+      "focus-q30-pg-pg_psycopg_exttext-polars-10k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-100k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-1m",
+      "focus-q30-pg-pg_psycopg_exttext-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w105-exttext",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-w105-1",
+      "focus-q24-pg-pg_psycopg_exttext-w105-10k",
+      "focus-q24-pg-pg_psycopg_exttext-w105-100k",
+      "focus-q24-pg-pg_psycopg_exttext-w105-1m",
+      "focus-q24-pg-pg_psycopg_exttext-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w105-exttext-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-df-w105-1",
+      "focus-q24-pg-pg_psycopg_exttext-df-w105-10k",
+      "focus-q24-pg-pg_psycopg_exttext-df-w105-100k",
+      "focus-q24-pg-pg_psycopg_exttext-df-w105-1m",
+      "focus-q24-pg-pg_psycopg_exttext-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w105-exttext-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_exttext-polars-w105-1",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w105-10k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w105-100k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w105-1m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w50-exttext",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-w50-1",
+      "focus-q24-pg-pg_psycopg_exttext-w50-10k",
+      "focus-q24-pg-pg_psycopg_exttext-w50-100k",
+      "focus-q24-pg-pg_psycopg_exttext-w50-1m",
+      "focus-q24-pg-pg_psycopg_exttext-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w50-exttext-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q24"
+    ],
+    "cell_ids": [
+      "focus-q24-pg-pg_psycopg_exttext-df-w50-1",
+      "focus-q24-pg-pg_psycopg_exttext-df-w50-10k",
+      "focus-q24-pg-pg_psycopg_exttext-df-w50-100k",
+      "focus-q24-pg-pg_psycopg_exttext-df-w50-1m",
+      "focus-q24-pg-pg_psycopg_exttext-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q24-pg-w50-exttext-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_exttext-polars-w50-1",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w50-10k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w50-100k",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w50-1m",
+      "focus-q30-pg-pg_psycopg_exttext-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q25-pg-w10-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q25"
+    ],
+    "cell_ids": [
+      "focus-q25-pg-pg_psycopg_simple-raw-1",
+      "focus-q25-pg-pg_psycopg_simple-raw-10k",
+      "focus-q25-pg-pg_psycopg_simple-raw-100k",
+      "focus-q25-pg-pg_psycopg_simple-raw-1m",
+      "focus-q25-pg-pg_psycopg_simple-raw-10m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-1",
+      "focus-q25-pg-pg_psycopg_exttext-raw-10k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-100k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-1m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-10m",
+      "focus-q25-pg-pg_psycopg_binary-raw-1",
+      "focus-q25-pg-pg_psycopg_binary-raw-10k",
+      "focus-q25-pg-pg_psycopg_binary-raw-100k",
+      "focus-q25-pg-pg_psycopg_binary-raw-1m",
+      "focus-q25-pg-pg_psycopg_binary-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q25-pg-w105-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q25"
+    ],
+    "cell_ids": [
+      "focus-q25-pg-pg_psycopg_simple-raw-w105-1",
+      "focus-q25-pg-pg_psycopg_simple-raw-w105-10k",
+      "focus-q25-pg-pg_psycopg_simple-raw-w105-100k",
+      "focus-q25-pg-pg_psycopg_simple-raw-w105-1m",
+      "focus-q25-pg-pg_psycopg_simple-raw-w105-10m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w105-1",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w105-10k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w105-100k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w105-1m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w105-10m",
+      "focus-q25-pg-pg_psycopg_binary-raw-w105-1",
+      "focus-q25-pg-pg_psycopg_binary-raw-w105-10k",
+      "focus-q25-pg-pg_psycopg_binary-raw-w105-100k",
+      "focus-q25-pg-pg_psycopg_binary-raw-w105-1m",
+      "focus-q25-pg-pg_psycopg_binary-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q25-pg-w50-raw",
+    "lane": "pg",
+    "question_ids": [
+      "Q25"
+    ],
+    "cell_ids": [
+      "focus-q25-pg-pg_psycopg_simple-raw-w50-1",
+      "focus-q25-pg-pg_psycopg_simple-raw-w50-10k",
+      "focus-q25-pg-pg_psycopg_simple-raw-w50-100k",
+      "focus-q25-pg-pg_psycopg_simple-raw-w50-1m",
+      "focus-q25-pg-pg_psycopg_simple-raw-w50-10m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w50-1",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w50-10k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w50-100k",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w50-1m",
+      "focus-q25-pg-pg_psycopg_exttext-raw-w50-10m",
+      "focus-q25-pg-pg_psycopg_binary-raw-w50-1",
+      "focus-q25-pg-pg_psycopg_binary-raw-w50-10k",
+      "focus-q25-pg-pg_psycopg_binary-raw-w50-100k",
+      "focus-q25-pg-pg_psycopg_binary-raw-w50-1m",
+      "focus-q25-pg-pg_psycopg_binary-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w10-nocopy-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q28"
+    ],
+    "cell_ids": [
+      "focus-q28-pg-pg_adbc_nocopy-df-1",
+      "focus-q28-pg-pg_adbc_nocopy-df-10k",
+      "focus-q28-pg-pg_adbc_nocopy-df-100k",
+      "focus-q28-pg-pg_adbc_nocopy-df-1m",
+      "focus-q28-pg-pg_adbc_nocopy-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w10-nocopy-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_nocopy-polars-1",
+      "focus-q30-pg-pg_adbc_nocopy-polars-10k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-100k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-1m",
+      "focus-q30-pg-pg_adbc_nocopy-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w105-nocopy-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q28"
+    ],
+    "cell_ids": [
+      "focus-q28-pg-pg_adbc_nocopy-df-w105-1",
+      "focus-q28-pg-pg_adbc_nocopy-df-w105-10k",
+      "focus-q28-pg-pg_adbc_nocopy-df-w105-100k",
+      "focus-q28-pg-pg_adbc_nocopy-df-w105-1m",
+      "focus-q28-pg-pg_adbc_nocopy-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w105-nocopy-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_nocopy-polars-w105-1",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w105-10k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w105-100k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w105-1m",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w50-nocopy-df",
+    "lane": "pg",
+    "question_ids": [
+      "Q28"
+    ],
+    "cell_ids": [
+      "focus-q28-pg-pg_adbc_nocopy-df-w50-1",
+      "focus-q28-pg-pg_adbc_nocopy-df-w50-10k",
+      "focus-q28-pg-pg_adbc_nocopy-df-w50-100k",
+      "focus-q28-pg-pg_adbc_nocopy-df-w50-1m",
+      "focus-q28-pg-pg_adbc_nocopy-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q28-pg-w50-nocopy-df-polars",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_adbc_nocopy-polars-w50-1",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w50-10k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w50-100k",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w50-1m",
+      "focus-q30-pg-pg_adbc_nocopy-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w10-httpnative-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native_df-df-1",
+      "focus-q31-ch-ch_http_native_df-df-10k",
+      "focus-q31-ch-ch_http_native_df-df-100k",
+      "focus-q31-ch-ch_http_native_df-df-1m",
+      "focus-q31-ch-ch_http_native_df-df-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w10-httpnative-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_native_df-polars-1",
+      "focus-q30-ch-ch_http_native_df-polars-10k",
+      "focus-q30-ch-ch_http_native_df-polars-100k",
+      "focus-q30-ch-ch_http_native_df-polars-1m",
+      "focus-q30-ch-ch_http_native_df-polars-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w10-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native-raw-1",
+      "focus-q31-ch-ch_http_native-raw-10k",
+      "focus-q31-ch-ch_http_native-raw-100k",
+      "focus-q31-ch-ch_http_native-raw-1m",
+      "focus-q31-ch-ch_http_native-raw-10m",
+      "focus-q31-ch-ch_http_arrowstream-raw-1",
+      "focus-q31-ch-ch_http_arrowstream-raw-10k",
+      "focus-q31-ch-ch_http_arrowstream-raw-100k",
+      "focus-q31-ch-ch_http_arrowstream-raw-1m",
+      "focus-q31-ch-ch_http_arrowstream-raw-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w105-httpnative-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native_df-df-w105-1",
+      "focus-q31-ch-ch_http_native_df-df-w105-10k",
+      "focus-q31-ch-ch_http_native_df-df-w105-100k",
+      "focus-q31-ch-ch_http_native_df-df-w105-1m",
+      "focus-q31-ch-ch_http_native_df-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w105-httpnative-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_native_df-polars-w105-1",
+      "focus-q30-ch-ch_http_native_df-polars-w105-10k",
+      "focus-q30-ch-ch_http_native_df-polars-w105-100k",
+      "focus-q30-ch-ch_http_native_df-polars-w105-1m",
+      "focus-q30-ch-ch_http_native_df-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w105-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native-raw-w105-1",
+      "focus-q31-ch-ch_http_native-raw-w105-10k",
+      "focus-q31-ch-ch_http_native-raw-w105-100k",
+      "focus-q31-ch-ch_http_native-raw-w105-1m",
+      "focus-q31-ch-ch_http_native-raw-w105-10m",
+      "focus-q31-ch-ch_http_arrowstream-raw-w105-1",
+      "focus-q31-ch-ch_http_arrowstream-raw-w105-10k",
+      "focus-q31-ch-ch_http_arrowstream-raw-w105-100k",
+      "focus-q31-ch-ch_http_arrowstream-raw-w105-1m",
+      "focus-q31-ch-ch_http_arrowstream-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w50-httpnative-df",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native_df-df-w50-1",
+      "focus-q31-ch-ch_http_native_df-df-w50-10k",
+      "focus-q31-ch-ch_http_native_df-df-w50-100k",
+      "focus-q31-ch-ch_http_native_df-df-w50-1m",
+      "focus-q31-ch-ch_http_native_df-df-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w50-httpnative-df-polars",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_native_df-polars-w50-1",
+      "focus-q30-ch-ch_http_native_df-polars-w50-10k",
+      "focus-q30-ch-ch_http_native_df-polars-w50-100k",
+      "focus-q30-ch-ch_http_native_df-polars-w50-1m",
+      "focus-q30-ch-ch_http_native_df-polars-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "repr-q31-ch-w50-raw",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_native-raw-w50-1",
+      "focus-q31-ch-ch_http_native-raw-w50-10k",
+      "focus-q31-ch-ch_http_native-raw-w50-100k",
+      "focus-q31-ch-ch_http_native-raw-w50-1m",
+      "focus-q31-ch-ch_http_native-raw-w50-10m",
+      "focus-q31-ch-ch_http_arrowstream-raw-w50-1",
+      "focus-q31-ch-ch_http_arrowstream-raw-w50-10k",
+      "focus-q31-ch-ch_http_arrowstream-raw-w50-100k",
+      "focus-q31-ch-ch_http_arrowstream-raw-w50-1m",
+      "focus-q31-ch-ch_http_arrowstream-raw-w50-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-chfmt-ch-json-arrow-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-arrow-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-chfmt-ch-json-df-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-df-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-chfmt-ch-json-raw-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-raw-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-chfmt-ch-json-tuples-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q31"
+    ],
+    "cell_ids": [
+      "focus-q31-ch-ch_http_json-json-tuples-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-polars-ch-ch_http_json-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_http_json-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-polars-ch-ch_pg_emu-w105-10m",
+    "lane": "ch",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-ch-ch_pg_emu-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-polars-pg-pg_psycopg_binary-w105-10m",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_binary-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-polars-pg-pg_psycopg_exttext-w105-10m",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_exttext-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  },
+  {
+    "block_id": "solo-polars-pg-pg_psycopg_simple-w105-10m",
+    "lane": "pg",
+    "question_ids": [
+      "Q30"
+    ],
+    "cell_ids": [
+      "focus-q30-pg-pg_psycopg_simple-polars-w105-10m"
+    ],
+    "execution_condition": "core",
+    "stage": "c7",
+    "pre_post": "full pass per path/table pair once per session",
+    "round_order": "one warmup 0, then complete shuffled round 1..5 across all cells"
+  }
+]

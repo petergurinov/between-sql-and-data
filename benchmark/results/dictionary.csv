@@ -1,0 +1,130 @@
+field,type,unit,description,source,grain,default_aggregation,datalens_role
+record_id,string,,Уникальный идентификатор строки.,observation_id или outcome:cell_id,record,none,dimension
+record_type,string,,execution — фактическое исполнение; declared_outcome — исход без строки измерения.,derived,record,none,dimension
+benchmark_session_id,string,,Идентификатор измерительной сессии.,run_id,record,none,dimension
+cell_id,string,,Идентификатор клетки бенчмарка.,cell_id,cell,none,dimension
+attempt_id,string,,Идентификатор попытки блока.,attempt_id,execution,none,dimension
+block_attempt_id,string,,Идентификатор попытки с областью блока.,block_attempt_id,execution,none,dimension
+execution_no,int,номер,Порядковый номер исполнения в исходном файле.,exec_no,execution,none,dimension
+round,int,раунд,Номер раунда; прогрев всегда имеет значение 0.,round,execution,none,dimension
+round_role,string,,"Роль раунда: primary, warmup, redo или service.",round_role,execution,none,dimension
+is_warmup,bool,,Признак прогрева.,is_warmup,execution,none,dimension
+is_selected_attempt,bool,,Исполнение относится к выбранной попытке клетки.,selected_attempt,execution,none,dimension
+include_in_default_stats,bool,,Строка участвует в принятой основной статистике.,include_in_default_stats,execution,none,filter
+is_cell_anchor,bool,,Ровно одна строка на клетку для графиков с полями cell_*.,derived,record,none,filter
+measurement_role,string,,"Роль измерения: путь, диагностика сервера, удержание памяти или мост.",measurement_role,record,none,dimension
+measurement_status,string,,Статус конкретного исполнения или объявленного исхода.,status/cell_validity,record,none,dimension
+validity_status,string,,Статус пригодности исходного наблюдения.,validity_status,execution,none,dimension
+exclusion_reason,string,,Причина исключения исполнения из основной статистики.,exclusion_reason,execution,none,dimension
+cell_validity,string,,Итоговый статус клетки.,01-results.cell_validity,cell,none,dimension
+failure_stage,string,,Стадия отказа клетки.,01-results.failure_stage,cell,none,dimension
+failure_reason,string,,Причина отказа клетки.,01-results.failure_reason,cell,none,dimension
+memory_evidence_level,string,,Уровень свидетельства ограничения памяти.,01-results.memory_evidence_level,cell,none,dimension
+engine,string,,Код движка: pg или ch.,lane/engine,cell,none,dimension
+engine_name,string,,Название СУБД.,01-results.engine_label,cell,none,dimension
+path_id,string,,Канонический идентификатор пути доставки.,01-results.path_id,cell,none,dimension
+path_name,string,,Человекочитаемое название пути.,01-results.path_label,cell,none,dimension
+library,string,,Клиентская библиотека.,01-results.library,cell,none,dimension
+api,string,,Фактически вызванный API.,01-results.api,cell,none,dimension
+transport,string,,Транспорт или протокол.,01-results.transport,cell,none,dimension
+wire_format,string,,Формат данных на проводе.,execution/01-results.wire_format,record,none,dimension
+codec,string,,Кодек сжатия.,execution/01-results.codec,record,none,dimension
+codec_level,string,,Уровень кодека.,execution/01-results.codec_level,record,none,dimension
+target,string,,Конечная структура результата.,execution/01-results.target,record,none,dimension
+materialization,string,,Уровень материализации результата.,execution/01-results.mat_level,record,none,dimension
+type_restoration,string,,Режим восстановления типов.,01-results.type_restoration,cell,none,dimension
+result_schema_id,string,,Идентификатор ожидаемой схемы результата.,01-results.result_schema_id,cell,none,dimension
+logical_schema_id,string,,Идентификатор логической схемы.,01-results.logical_schema_id,cell,none,dimension
+observed_schema_id,string,,Идентификатор фактически наблюдаемой схемы.,execution/01-results.observed_schema_id,record,none,dimension
+dataset_id,string,,Идентификатор набора данных.,01-results.dataset_id,cell,none,dimension
+dataset_snapshot_id,string,,Версия снимка данных.,01-results.dataset_snapshot_id,cell,none,dimension
+table_id,string,,Логическое имя таблицы теста.,01-results.table,cell,none,dimension
+width,string,,Класс ширины набора.,01-results.width,cell,none,dimension
+rows_expected,int,строк,Ожидаемое число строк.,01-results.rows_expected,cell,median,measure
+rows_observed_cell,int,строк,Проверенное число строк результата клетки.,01-results.rows_observed,cell,max,measure
+question_id,string,,Вопрос исследовательской сетки.,01-results.question_id,cell,none,dimension
+comparison_id,string,,Идентификатор объявленного сравнения.,01-results.comparison_id,cell,none,dimension
+rating_group_id,string,,Публичная группа расчета кратности.,derived from rating dimensions,cell,none,dimension
+rating_baseline_cell_id,string,,Клетка-знаменатель группы рейтинга.,01-results.rating_baseline_cell_id,cell,none,dimension
+rating_scope,string,,Область рейтинга.,01-results.rating_scope,cell,none,dimension
+condition_id,string,,Идентификатор условий измерения.,condition_id,record,none,dimension
+timer_contract,string,,Граница измеряемого времени.,timer_contract,record,none,dimension
+connect_included,bool,,Подключение входит в контракт секундомера.,01-results.connect_included,cell,none,dimension
+connection_close_included,bool,,Закрытие подключения входит в контракт секундомера.,01-results.connection_close_included,cell,none,dimension
+result_cleanup_included,bool,,Очистка результата входит в контракт секундомера.,01-results.result_cleanup_included,cell,none,dimension
+cpu_scope,string,,Область измерения CPU.,execution/01-results.cpu_scope,record,none,dimension
+memory_scope,string,,Область измерения памяти.,01-results.memory_scope,cell,none,dimension
+harness_version,string,,Версия измерительного харнесса.,06-conditions.harness_tag_measured,condition,none,dimension
+engine_version,string,,Заявленная версия движка.,06-conditions.engine_version_declared,condition,none,dimension
+client_cpu_model,string,,Модель процессора клиента.,06-conditions.client_cpu_model,condition,none,dimension
+client_cpu_count,int,ядер,Число доступных логических CPU клиента.,06-conditions.client_nproc,condition,max,measure
+client_memory,string,,Объем памяти клиента в исходной записи условий.,06-conditions.client_mem_total,condition,none,dimension
+client_python,string,,Версия Python клиента.,06-conditions.client_python,condition,none,dimension
+client_kernel,string,,Версия ядра клиента.,06-conditions.client_kernel_release,condition,none,dimension
+network_profile,string,,Профиль сети.,06-conditions.net_profile,condition,none,dimension
+library_versions,string,,Версии клиентских библиотек в JSON.,06-conditions.library_versions_json,condition,none,dimension
+polars_max_threads,int,потоков,Ограничение потоков Polars.,06-conditions.polars_max_threads,condition,max,measure
+environment_caveat,string,,Оговорка об условиях измерения.,06-conditions.environment_caveat,condition,none,dimension
+started_at_utc,timestamp,UTC,Начало исполнения.,02-executions.ts_start_utc,execution,none,dimension
+finished_at_utc,timestamp,UTC,Конец исполнения.,02-executions.ts_end_utc,execution,none,dimension
+wall_s,float,s,Время исполнения по контракту секундомера.,02-executions.wall_s,execution,median,measure
+connect_s,float,s,Время подключения.,02-executions.connect_s,execution,median,measure
+ttfb_s,float,s,Время до первого байта в единицах источника.,02-executions.ttfb_s,execution,median,measure
+cleanup_s,float,s,Время очистки результата.,02-executions.cleanup_s,execution,median,measure
+post_check_s,float,s,Время проверки после измерения.,02-executions.post_check_s,execution,median,measure
+extra_s,float,s,Дополнительная стадия измерения.,02-executions.extra_s,execution,median,measure
+server_time_s,float,s,Серверное время диагностической пробы.,02-executions.server_time_s,execution,median,measure
+serialize_time_s,float,s,Время сериализации серверной пробы.,02-executions.serialize_time_s,execution,median,measure
+peak_rss_mib,float,MiB,Пиковая память процесса исполнения.,02-executions.peak_rss_mib,execution,median,measure
+rss_settled_mib,float,MiB,Память после стабилизации.,02-executions.rss_settled_mib,execution,median,measure
+retained_mib,float,MiB,Оценка удержанной памяти.,02-executions.retained_mib,execution,median,measure
+cpu_user_s,float,s,Пользовательское время CPU.,02-executions.cpu_user_s,execution,median,measure
+cpu_sys_s,float,s,Системное время CPU.,02-executions.cpu_sys_s,execution,median,measure
+cpu_total_s,float,s,Суммарное время CPU.,02-executions.cpu_total_s,execution,median,measure
+cpu_cores_equivalent,float,cores,Отношение cpu_total_s к wall_s.,derived,execution,median,measure
+interface_rx_mib,float,MiB,Принято по счетчику интерфейса.,02-executions.interface_rx_mib,execution,median,measure
+interface_tx_mib,float,MiB,Передано по счетчику интерфейса.,02-executions.interface_tx_mib,execution,median,measure
+packets_rx,int,packets,Принято пакетов.,02-executions.packets_rx,execution,median,measure
+packets_tx,int,packets,Передано пакетов.,02-executions.packets_tx,execution,median,measure
+payload_rx_estimated_mib,float,MiB,Расчетная полезная нагрузка.,02-executions.payload_rx_estimated_mib,execution,median,measure
+rows,int,строк,Число строк конкретного исполнения.,02-executions.rows,execution,median,measure
+rows_per_s,float,rows/s,Строк в секунду для конкретного исполнения.,derived: rows / wall_s,execution,median,measure
+payload_mib_per_s,float,MiB/s,Полезная нагрузка в секунду для конкретного исполнения.,derived: payload / wall_s,execution,median,measure
+rss_to_payload_ratio,float,ratio,Пиковая память к расчетной полезной нагрузке.,derived,execution,median,measure
+server_output_kib,float,KiB,Объем выхода серверной пробы.,02-executions.server_output_kib,execution,median,measure
+steal_ticks,float,ticks,Steal ticks за окно исполнения.,02-executions.steal_ticks,execution,median,measure
+result_digest,string,,Digest результата исполнения.,02-executions.digest,execution,none,dimension
+cell_primary_rounds,int,раундов,Число принятых зачетных раундов клетки.,01-results.n_primary_used,cell,max,measure
+cell_wall_median_s,float,s,Принятая медиана времени клетки.,01-results.wall_median_s,cell,max,measure
+cell_wall_min_s,float,s,Минимум времени клетки.,01-results.wall_min_s,cell,max,measure
+cell_wall_max_s,float,s,Максимум времени клетки.,01-results.wall_max_s,cell,max,measure
+cell_wall_spread_ratio,float,ratio,Отношение максимума ко минимуму времени.,01-results.wall_spread_ratio,cell,max,measure
+cell_peak_rss_median_mib,float,MiB,Медиана пика памяти клетки.,01-results.peak_rss_median_mib,cell,max,measure
+cell_peak_rss_max_mib,float,MiB,Максимальный пик памяти клетки.,01-results.peak_rss_max_mib,cell,max,measure
+cell_cpu_total_median_s,float,s,Медиана суммарного CPU клетки.,01-results.cpu_total_median_s,cell,max,measure
+cell_cpu_cores_equivalent,float,cores,Принятый эквивалент загрузки ядер клетки.,01-results.cpu_cores_equivalent,cell,max,measure
+cell_interface_rx_median_mib,float,MiB,Медиана счетчика приема клетки.,01-results.interface_rx_median_mib,cell,max,measure
+cell_payload_rx_estimated_median_mib,float,MiB,Медиана расчетной полезной нагрузки клетки.,01-results.payload_rx_estimated_median_mib,cell,max,measure
+cell_rows_per_s,float,rows/s,Принятая производительность клетки.,01-results.rows_per_s,cell,max,measure
+cell_payload_mib_per_s,float,MiB/s,Принятая полезная нагрузка в секунду клетки.,01-results.payload_mib_per_s,cell,max,measure
+cell_rss_to_payload_ratio,float,ratio,Принятое отношение памяти к полезной нагрузке.,01-results.rss_to_payload_ratio,cell,max,measure
+cell_rating_multiplier,float,ratio,Кратность времени к базе рейтинговой группы.,derived from rating baseline,cell,max,measure
+time_quality,string,,Пригодность времени клетки.,01-results.time_publishability,cell,none,dimension
+memory_quality,string,,Пригодность памяти клетки.,01-results.memory_publishability,cell,none,dimension
+cpu_quality,string,,Пригодность CPU клетки.,01-results.cpu_publishability,cell,none,dimension
+payload_quality,string,,Пригодность расчетной полезной нагрузки.,01-results.payload_publishability,cell,none,dimension
+interface_counter_quality,string,,Пригодность счетчика сетевого интерфейса.,04-metric-quality.interface_bytes_rx,cell,none,dimension
+rows_quality,string,,Пригодность числа строк.,04-metric-quality.rows,cell,none,dimension
+server_time_quality,string,,Пригодность серверного времени.,04-metric-quality.server_time,cell,none,dimension
+serialize_time_quality,string,,Пригодность времени сериализации.,04-metric-quality.serialize_time,cell,none,dimension
+server_output_quality,string,,Пригодность объема серверного выхода.,04-metric-quality.server_output,cell,none,dimension
+quality_summary,string,,Краткое описание качества метрик клетки.,01-results.quality_summary,cell,none,dimension
+caveat,string,,Оговорка для интерпретации клетки.,01-results.caveat,cell,none,dimension
+time_usable,bool,,Время разрешено показывать с учетом оговорки.,derived,cell,none,filter
+memory_usable,bool,,Память разрешено показывать с учетом оговорки.,derived,cell,none,filter
+cpu_usable,bool,,CPU разрешено показывать с учетом оговорки.,derived,cell,none,filter
+payload_usable,bool,,Полезная нагрузка разрешена к показу.,derived,cell,none,filter
+show_time_by_default,bool,,Готовый фильтр основных графиков времени.,include_in_default_stats AND time_usable,execution,none,filter
+show_memory_by_default,bool,,Готовый фильтр основных графиков памяти.,include_in_default_stats AND memory_usable,execution,none,filter
+show_cpu_by_default,bool,,Готовый фильтр основных графиков CPU.,include_in_default_stats AND cpu_usable,execution,none,filter
+show_payload_by_default,bool,,Готовый фильтр основных графиков полезной нагрузки.,include_in_default_stats AND payload_usable,execution,none,filter

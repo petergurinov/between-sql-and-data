@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: "PostgreSQL and ClickHouse data-path benchmark"
+message: "If you use this benchmark, cite the repository version and result manifest."
+type: software
+version: 1.0.0
+license: Apache-2.0
+date-released: 2026-09-23
